@@ -12,6 +12,8 @@ with permissions =777
   - /data/data/grafana
   - /data/log/graphite
   - /data/log/elasticsearch
+I have removed ansible (doesnt work on debian anyway, many permissions errors I cant be bothered to fix yet), just do the setup yourself.
+
 
 Their useless setup instructions:
 # screeps-grafana

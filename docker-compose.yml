@@ -10,17 +10,17 @@ services:
     environment:
       GRAPHITE_PORT_8125_UDP_ADDR: "statsd"
     env_file: docker-compose.env
+    ports:
+     - "443:443"
+     - "80:80"
   statsd:
     image: ennexa/statsd
     links: 
      - graphite
-    volumes:
-     - /data/log/elasticsearch:/etc/statsd
   graphite: 
     image: ennexa/graphite
     restart: always
     volumes:
-     - /data/log/graphite:/opt/graphite/conf
      - /data/data/whisper:/opt/graphite/storage/whisper
   grafana:
     image: grafana/grafana
