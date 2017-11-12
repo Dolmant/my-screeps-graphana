@@ -1,3 +1,19 @@
+My notes:
+No idea how the ansible thing ever worked unless it has a copy of the source already. Just git clone (my version) into the instance,
+install docker and run build.
+a micro might fail to build the container though, just watch out.
+
+to start, just run bash setup.sh
+
+if yo uare running this for the first time, make sure you create
+with permissions =777
+  - /data/data/whisper
+  - /data/data/elasticsearch
+  - /data/data/grafana
+  - /data/log/graphite
+  - /data/log/elasticsearch
+
+Their useless setup instructions:
 # screeps-grafana
 
 Pretty graphs for Screeps stats. 

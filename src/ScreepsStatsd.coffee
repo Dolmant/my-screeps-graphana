@@ -68,6 +68,7 @@ class ScreepsStatsd
         "X-Username": token
       qs:
         path: 'stats'
+        shard: 'shard1'
     rp(options).then (x) =>
       # yeah... dunno why
       token = x.headers['x-token']
